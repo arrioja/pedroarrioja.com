@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pedro Arrioja — Engineering Leader</title>
+<meta name="description" content="Pedro Arrioja — Engineering leader with 30 years in IT. Engineering Manager, software architect and Partner at Cundasia™.">
+<meta property="og:title" content="Pedro Arrioja — Engineering Leader">
+<meta property="og:description" content="30 years in IT. 20+ years leading technical teams. Partner at Cundasia™.">
+<meta property="og:type" content="profile">
+<meta name="theme-color" content="#0b1120">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Pedro Arrioja",
+  "jobTitle": "Engineering Manager",
+  "sameAs": ["https://www.linkedin.com/in/pedro-arrioja/", "https://github.com/arrioja"],
+  "worksFor": [{"@type": "Organization", "name": "Zensurance"}, {"@type": "Organization", "name": "Cundasia", "url": "https://cundasia.com"}],
+  "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Universidad Simón Bolívar"}, {"@type": "CollegeOrUniversity", "name": "Instituto Universitario Politécnico Santiago Mariño"}],
+  "knowsLanguage": ["es", "en", "fr"]
+}
+</script>
+<style>
+:root{
+  --bg:#0b1120;
+  --bg-2:#0f172a;
+  --surface:#111a2e;
+  --surface-2:#16213a;
+  --line:#1f2c47;
+  --text:#e6edf7;
+  --muted:#93a3bd;
+  --dim:#64748b;
+  --accent:#22d3ee;
+  --accent-2:#38bdf8;
+  --accent-3:#a78bfa;
+  --ok:#34d399;
+  --radius:14px;
+  --max:1120px;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{
+  background:var(--bg);color:var(--text);font-family:var(--sans);
+  font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+/* language switch: hide the non-active language */
+html[lang="en"] body [lang="es"],
+html[lang="es"] body [lang="en"]{display:none !important}
+
+a{color:var(--accent);text-decoration:none}
+a:hover{color:#67e8f9}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.mono{font-family:var(--mono)}
+
+/* ---------- header ---------- */
+header.top{
+  position:sticky;top:0;z-index:50;
+  background:rgba(11,17,32,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--text);font-weight:700;letter-spacing:-.01em}
+.brand .logo{width:32px;height:32px}
+.brand span{font-family:var(--mono);font-size:.95rem}
+.brand span b{color:var(--accent)}
+.nav ul{display:flex;list-style:none;gap:26px}
+.nav ul a{color:var(--muted);font-size:.92rem;font-weight:500}
+.nav ul a:hover{color:var(--text)}
+.lang{
+  display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--surface);
+}
+.lang button{
+  font:500 .78rem var(--mono);color:var(--muted);background:none;border:0;cursor:pointer;
+  padding:5px 11px;border-radius:999px;
+}
+html[lang="en"] .lang [data-set="en"],
+html[lang="es"] .lang [data-set="es"]{background:var(--accent);color:#04202a}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:96px 0 72px;overflow:hidden}
+.hero .grid-bg{
+  position:absolute;inset:0;z-index:-1;
+  background-image:
+    linear-gradient(var(--line) 1px,transparent 1px),
+    linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:48px 48px;
+  mask-image:radial-gradient(ellipse 70% 60% at 70% 30%,#000 20%,transparent 75%);
+  -webkit-mask-image:radial-gradient(ellipse 70% 60% at 70% 30%,#000 20%,transparent 75%);
+  opacity:.55;
+}
+.hero .glow{
+  position:absolute;z-index:-1;width:620px;height:620px;right:-160px;top:-200px;border-radius:50%;
+  background:radial-gradient(circle,rgba(34,211,238,.18),transparent 65%);
+}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;font:500 .8rem var(--mono);color:var(--accent);
+  border:1px solid rgba(34,211,238,.3);background:rgba(34,211,238,.06);padding:6px 12px;border-radius:999px;
+}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px rgba(52,211,153,.18)}
+h1{font-size:clamp(2.6rem,6vw,4.4rem);line-height:1.04;letter-spacing:-.035em;font-weight:800;margin:22px 0 18px}
+h1 .grad{background:linear-gradient(90deg,var(--accent),var(--accent-3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:1.18rem;color:var(--muted);max-width:560px}
+.lead strong{color:var(--text);font-weight:600}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem;
+  padding:12px 20px;border-radius:10px;border:1px solid var(--line);color:var(--text);background:var(--surface);
+  transition:transform .15s,border-color .15s,background .15s;
+}
+.btn:hover{transform:translateY(-1px);border-color:#2f4166;color:var(--text)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#04202a}
+.btn.primary:hover{background:#67e8f9;color:#04202a}
+.btn svg{width:18px;height:18px}
+
+/* hero visual */
+.hero-visual{position:relative;padding:0 0 150px 40px}
+.photo-frame{
+  position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/5;
+  border:1px solid var(--line);box-shadow:0 40px 90px -40px rgba(0,0,0,.8);
+}
+.photo-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(11,17,32,.65))}
+.photo-frame img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.hero-visual::before{
+  content:"";position:absolute;right:-14px;top:-14px;width:60%;height:60%;border-radius:22px;z-index:-1;
+  background:linear-gradient(135deg,var(--accent),var(--accent-3));opacity:.35;filter:blur(2px);
+}
+.hero-visual .terminal{position:absolute;left:0;bottom:0;width:78%}
+.hero-visual .terminal pre{font-size:.78rem;line-height:1.7;padding:16px 18px}
+/* terminal card */
+.terminal{
+  background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--line);
+  border-radius:var(--radius);box-shadow:0 30px 80px -30px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.02) inset;
+  overflow:hidden;
+}
+.terminal .bar{display:flex;align-items:center;gap:7px;padding:12px 14px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.15)}
+.terminal .bar i{width:11px;height:11px;border-radius:50%;background:#334155}
+.terminal .bar i:nth-child(1){background:#f87171}.terminal .bar i:nth-child(2){background:#fbbf24}.terminal .bar i:nth-child(3){background:#34d399}
+.terminal .bar span{margin-left:8px;font:.75rem var(--mono);color:var(--dim)}
+.terminal pre{padding:20px 22px;font:400 .86rem/1.8 var(--mono);color:var(--muted);white-space:pre-wrap;word-break:break-word}
+.terminal .p{color:var(--ok)}.terminal .c{color:var(--text)}.terminal .k{color:var(--accent-2)}.terminal .s{color:#fcd34d}.terminal .n{color:var(--accent-3)}
+.cursor{display:inline-block;width:8px;height:1em;background:var(--accent);vertical-align:-2px;animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:72px}
+.stat{background:var(--bg-2);padding:26px 24px}
+.stat b{display:block;font-size:2.2rem;font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.stat b em{font-style:normal;color:var(--accent)}
+.stat span{color:var(--muted);font-size:.9rem}
+
+/* ---------- sections ---------- */
+section{padding:96px 0}
+section.alt{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sec-head{margin-bottom:48px;max-width:720px}
+.sec-head .tag{font:500 .8rem var(--mono);color:var(--accent);letter-spacing:.04em}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);letter-spacing:-.03em;line-height:1.15;margin:10px 0 14px;font-weight:800}
+.sec-head p{color:var(--muted);font-size:1.06rem}
+
+/* about */
+.about{display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:start}
+.portrait{position:relative;aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+/* leadership in action */
+.action{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:40px}
+.shot{position:relative;margin:0;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);aspect-ratio:16/10;background:var(--surface)}
+.shot img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.shot:hover img{transform:scale(1.03)}
+.shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:44px 20px 16px;background:linear-gradient(180deg,transparent,rgba(11,17,32,.92))}
+.shot figcaption b{display:block;font-size:1.02rem}
+.shot figcaption span{font:500 .78rem var(--mono);color:var(--accent)}
+.portrait figcaption{position:absolute;left:12px;bottom:12px;font:.72rem var(--mono);color:var(--muted);background:rgba(11,17,32,.75);padding:4px 8px;border-radius:6px}
+.about-text p{color:var(--muted);margin-bottom:16px;font-size:1.05rem}
+.about-text p strong{color:var(--text);font-weight:600}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.fact{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--surface)}
+.fact small{display:block;font:.72rem var(--mono);color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+.fact span{font-weight:600;font-size:.95rem}
+
+/* leadership */
+.lead-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;
+  transition:border-color .2s,transform .2s;
+}
+.card:hover{border-color:#2f4166;transform:translateY(-2px)}
+.card .ico{width:44px;height:44px;border-radius:11px;display:grid;place-items:center;background:rgba(34,211,238,.1);color:var(--accent);margin-bottom:18px}
+.card .ico svg{width:22px;height:22px}
+.card h3{font-size:1.08rem;margin-bottom:8px;letter-spacing:-.01em}
+.card p{color:var(--muted);font-size:.94rem}
+
+.teams{margin-top:40px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:28px}
+.teams h3{font:600 .8rem var(--mono);color:var(--dim);text-transform:uppercase;letter-spacing:.08em;margin-bottom:22px}
+.bar-row{display:grid;grid-template-columns:220px 1fr 90px;gap:18px;align-items:center;padding:10px 0}
+.bar-row + .bar-row{border-top:1px dashed var(--line)}
+.bar-row .who b{display:block;font-size:.98rem}
+.bar-row .who span{color:var(--muted);font-size:.84rem}
+.track{height:10px;border-radius:99px;background:var(--bg);overflow:hidden;border:1px solid var(--line)}
+.track i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),var(--accent-3))}
+.bar-row .yrs{font:500 .85rem var(--mono);color:var(--muted);text-align:right}
+
+/* cundasia */
+.cunda{
+  position:relative;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;
+  border:1px solid var(--line);border-radius:20px;padding:48px;overflow:hidden;
+  background:radial-gradient(800px 400px at 100% 0%,rgba(167,139,250,.14),transparent 60%),
+             radial-gradient(600px 400px at 0% 100%,rgba(34,211,238,.10),transparent 60%),var(--surface);
+}
+.cunda h2{font-size:clamp(1.9rem,3.4vw,2.5rem);letter-spacing:-.03em;line-height:1.15;margin:10px 0 16px;font-weight:800}
+.cunda p{color:var(--muted);margin-bottom:14px}
+.cunda .role{display:inline-block;font:600 .82rem var(--mono);color:var(--accent-3);border:1px solid rgba(167,139,250,.35);background:rgba(167,139,250,.08);padding:6px 12px;border-radius:999px}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pillar{background:rgba(11,17,32,.6);border:1px solid var(--line);border-radius:12px;padding:18px}
+.pillar b{display:block;font:700 .78rem var(--mono);color:var(--accent);margin-bottom:6px}
+.pillar span{font-weight:600;font-size:.95rem}
+
+/* timeline */
+.timeline{position:relative;padding-left:32px}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--accent),var(--accent-3) 60%,var(--line))}
+.job{position:relative;padding-bottom:40px}
+.job:last-child{padding-bottom:0}
+.job::before{content:"";position:absolute;left:-32px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.job.lead-role::before{background:var(--accent);box-shadow:0 0 0 5px rgba(34,211,238,.15)}
+.job-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin-bottom:6px}
+.job-head h3{font-size:1.2rem;letter-spacing:-.01em}
+.job-head .org{color:var(--accent);font-weight:600}
+.job-head time{margin-left:auto;font:500 .82rem var(--mono);color:var(--dim)}
+.badge{font:600 .7rem var(--mono);color:#04202a;background:var(--accent);padding:2px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:.04em}
+.job p,.job li{color:var(--muted);font-size:.97rem}
+.job ul{margin:10px 0 0 18px}
+.job li{margin:3px 0}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.chip{font:500 .76rem var(--mono);color:var(--muted);border:1px solid var(--line);background:var(--surface);padding:4px 9px;border-radius:7px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.skills .card h3{display:flex;align-items:center;gap:10px}
+.skills .card h3 i{font:600 .75rem var(--mono);color:var(--accent);font-style:normal}
+.skills .chips{margin-top:14px}
+
+/* education */
+.edu{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.edu .card small{font:500 .8rem var(--mono);color:var(--dim)}
+.edu .card h3{margin-top:8px}
+
+/* contact */
+.contact{text-align:center;max-width:720px;margin:0 auto}
+.contact h2{font-size:clamp(2rem,4.4vw,3rem);letter-spacing:-.035em;line-height:1.1;font-weight:800;margin:10px 0 16px}
+.contact p{color:var(--muted);font-size:1.08rem}
+.contact .cta{justify-content:center}
+
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--dim);font-size:.85rem}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer .mono{font-size:.8rem}
+footer .built{display:inline-flex;align-items:center;gap:8px;font:500 .8rem var(--mono);color:var(--dim)}
+footer .built:hover{color:var(--text)}
+footer .built img{width:auto;height:38px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .cursor{animation:none}
+}
+
+/* ---------- responsive ---------- */
+.hero-grid>*,.cunda>*,.about>*,.lead-grid>*,.skills>*,.edu>*{min-width:0}
+@media (max-width:980px){
+  .hero-grid,.cunda{grid-template-columns:minmax(0,1fr)}
+  .lead-grid{grid-template-columns:1fr 1fr}
+  .action{grid-template-columns:minmax(0,1fr)}
+  .skills,.edu{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .about{grid-template-columns:1fr}
+  .portrait{max-width:300px}
+  .hero-visual{max-width:460px;padding-left:24px}
+  .nav ul{display:none}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  section{padding:72px 0}
+  .hero{padding:64px 0 56px}
+  .lead-grid,.skills,.edu,.facts,.pillars{grid-template-columns:minmax(0,1fr)}
+  .cunda{padding:28px 20px}
+  .hero-visual{padding:0}
+  .hero-visual .terminal{position:relative;width:auto;margin:-80px 12px 0}
+  .bar-row{grid-template-columns:1fr;gap:8px}
+  .bar-row .yrs{text-align:left}
+  .job-head time{margin-left:0;width:100%}
+  .stat b{font-size:1.8rem}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="#top" aria-label="Pedro Arrioja">
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true">
+        <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#a78bfa"/></linearGradient></defs>
+        <rect width="32" height="32" rx="8" fill="url(#lg)"/>
+        <path d="M9 22V10h5.2a3.8 3.8 0 0 1 0 7.6H9" fill="none" stroke="#0b1120" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M18 22l4.2-12L26 22M19.6 18h5" fill="none" stroke="#0b1120" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>pedro<b>.</b>arrioja</span>
+    </a>
+    <ul>
+      <li><a href="#about"><span lang="en">About</span><span lang="es">Perfil</span></a></li>
+      <li><a href="#leadership"><span lang="en">Leadership</span><span lang="es">Liderazgo</span></a></li>
+      <li><a href="#cundasia">Cundasia</a></li>
+      <li><a href="#experience"><span lang="en">Experience</span><span lang="es">Experiencia</span></a></li>
+      <li><a href="#skills"><span lang="en">Skills</span><span lang="es">Habilidades</span></a></li>
+      <li><a href="#contact"><span lang="en">Contact</span><span lang="es">Contacto</span></a></li>
+    </ul>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-set="en">EN</button>
+      <button type="button" data-set="es">ES</button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>
+          <span lang="en">Engineering Manager · Partner at Cundasia™</span>
+          <span lang="es">Engineering Manager · Socio de Cundasia™</span>
+        </span>
+        <h1>Pedro<br><span class="grad">Arrioja</span></h1>
+        <p class="lead" lang="en"><strong>30 years in IT</strong>, more than 20 of them <strong>leading engineering teams</strong>. I build software, and I build the teams that ship it.</p>
+        <p class="lead" lang="es"><strong>30 años en el mundo IT</strong>, más de 20 de ellos <strong>liderando equipos de ingeniería</strong>. Construyo software y también los equipos que lo hacen realidad.</p>
+        <div class="cta">
+          <a class="btn primary" href="#experience">
+            <span lang="en">View my experience</span><span lang="es">Ver mi experiencia</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/pedro-arrioja/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            LinkedIn
+          </a>
+          <a class="btn" href="https://github.com/arrioja" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+      <figure class="photo-frame"><img src="img/pedro-profile.jpg" alt="Pedro Arrioja looking at the horizon" width="864" height="1472" fetchpriority="high"></figure>
+      <div class="terminal" aria-label="Profile summary">
+        <div class="bar"><i></i><i></i><i></i><span>~/pedro — zsh</span></div>
+<pre><span class="p">$</span> <span class="c">whoami</span>
+pedro.arrioja
+
+<span class="p">$</span> <span class="c">cat profile.yml</span>
+<span class="k">years_in_it</span>:   <span class="n">30+</span>
+<span class="k">leading_teams</span>: <span class="n">20+ years</span>
+<span class="k">current</span>:
+  - <span class="s">Engineering Manager @ Zensurance</span>
+  - <span class="s">Partner @ Cundasia™</span>
+<span class="k">stack</span>: [<span class="s">Node</span>, <span class="s">NestJS</span>, <span class="s">PHP</span>, <span class="s">.NET</span>, <span class="s">AWS</span>, <span class="s">AI</span>]
+
+<span class="p">$</span> <span class="cursor"></span></pre>
+      </div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>30<em>+</em></b><span lang="en">years in IT</span><span lang="es">años en IT</span></div>
+      <div class="stat"><b>20<em>+</em></b><span lang="en">years leading teams</span><span lang="es">años liderando equipos</span></div>
+      <div class="stat"><b>25<em>+</em></b><span lang="en">engineers in one team</span><span lang="es">ingenieros en un solo equipo</span></div>
+      <div class="stat"><b>3</b><span lang="en">languages: ES · EN · FR</span><span lang="es">idiomas: ES · EN · FR</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="alt">
+  <div class="wrap about">
+    <figure class="portrait reveal">
+      <img src="img/pedro-portrait.jpg" alt="Pedro Arrioja" width="864" height="1184" loading="lazy">
+    </figure>
+    <div class="about-text reveal">
+      <div class="sec-head" style="margin-bottom:24px">
+        <span class="tag">01 / <span lang="en">About</span><span lang="es">Perfil</span></span>
+        <h2 lang="en">Developer at heart, leader by trade.</h2>
+        <h2 lang="es">Desarrollador de corazón, líder de oficio.</h2>
+      </div>
+      <div lang="en">
+        <p>I started in technology in the mid-90s, while studying Computer Science Engineering, and I have not stopped since. Over three decades I went from writing desktop software in Delphi to designing APIs in NodeJS and NestJS on AWS, with every stage in between: Linux servers, the web, e-commerce, digital marketing and, today, AI applied to development and automation.</p>
+        <p>What I enjoy most is <strong>leading technical teams</strong>: aligning business goals with engineering, mentoring developers, defining processes (Agile + Scrum) and making sure what we deliver meets the client's standards. I have led teams of up to <strong>25 programmers</strong> for clients in the United States, and I currently lead an engineering team at <strong>Zensurance</strong>.</p>
+        <p>I am bilingual (Spanish and English), self-motivated, and always reading and learning.</p>
+      </div>
+      <div lang="es">
+        <p>Empecé en tecnología a mediados de los 90, mientras estudiaba Ingeniería en Computación, y no he parado desde entonces. En tres décadas pasé de escribir software de escritorio en Delphi a diseñar APIs en NodeJS y NestJS sobre AWS, pasando por todas las etapas intermedias: servidores Linux, la web, e-commerce, marketing digital y, hoy, IA aplicada al desarrollo y la automatización.</p>
+        <p>Lo que más disfruto es <strong>liderar equipos técnicos</strong>: alinear los objetivos del negocio con la ingeniería, formar desarrolladores, definir procesos (Agile + Scrum) y asegurar que lo que entregamos cumple los estándares del cliente. He dirigido equipos de hasta <strong>25 programadores</strong> para clientes en Estados Unidos y actualmente lidero un equipo de ingeniería en <strong>Zensurance</strong>.</p>
+        <p>Soy bilingüe (español e inglés), automotivado y siempre estoy leyendo y aprendiendo.</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><small lang="en">Degree</small><small lang="es">Título</small><span lang="en">Computer Science Engineer</span><span lang="es">Ingeniero en Computación</span></div>
+        <div class="fact"><small lang="en">Postgraduate</small><small lang="es">Postgrado</small><span lang="en">State Audit Specialist</span><span lang="es">Especialista en Auditoría de Estado</span></div>
+        <div class="fact"><small lang="en">English</small><small lang="es">Inglés</small><span>IELTS 8/9 Speaking</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LEADERSHIP ================= -->
+<section id="leadership">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag">02 / <span lang="en">Leadership</span><span lang="es">Liderazgo</span></span>
+      <h2 lang="en">Two decades leading technical teams.</h2>
+      <h2 lang="es">Dos décadas liderando equipos técnicos.</h2>
+      <p lang="en">From a government IT department to distributed teams serving U.S. clients. Leadership is the common thread of my career.</p>
+      <p lang="es">Desde un departamento de IT gubernamental hasta equipos distribuidos para clientes en EE. UU. El liderazgo es el hilo conductor de mi carrera.</p>
+    </div>
+
+    <div class="action">
+      <figure class="shot reveal">
+        <img src="img/pedro-team.jpg" alt="Pedro Arrioja leading an engineering team meeting" width="1344" height="768" loading="lazy">
+        <figcaption><span lang="en">// team leadership</span><span lang="es">// liderazgo de equipos</span>
+          <b lang="en">Aligning engineers around architecture and code</b><b lang="es">Alineando al equipo en torno a la arquitectura y el código</b></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="img/pedro-keynote.jpg" alt="Pedro Arrioja speaking at a technology conference" width="1344" height="768" loading="lazy">
+        <figcaption><span lang="en">// speaking</span><span lang="es">// conferencias</span>
+          <b lang="en">Sharing three decades of experience in tech</b><b lang="es">Compartiendo tres décadas de experiencia en tecnología</b></figcaption>
+      </figure>
+    </div>
+
+    <div class="lead-grid">
+      <article class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3 lang="en">Team building</h3><h3 lang="es">Formación de equipos</h3>
+        <p lang="en">Hiring, mentoring and growing developers, designers and specialists into teams that perform.</p>
+        <p lang="es">Selección, mentoría y crecimiento de desarrolladores, diseñadores y especialistas en equipos de alto rendimiento.</p>
+      </article>
+      <article class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></div>
+        <h3 lang="en">Agile delivery</h3><h3 lang="es">Entrega ágil</h3>
+        <p lang="en">Agile + Scrum rituals, Jira and clear processes so work ships on time and to standard.</p>
+        <p lang="es">Ceremonias Agile + Scrum, Jira y procesos claros para entregar a tiempo y con calidad.</p>
+      </article>
+      <article class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 16.5 6.5 19.5l1-6.3L3 8.9 9 8z"/></svg></div>
+        <h3 lang="en">Digital transformation</h3><h3 lang="es">Transformación digital</h3>
+        <p lang="en">Proposing new technologies to clients and guiding them from legacy systems to modern platforms.</p>
+        <p lang="es">Propongo nuevas tecnologías a los clientes y los guío de sistemas legados a plataformas modernas.</p>
+      </article>
+      <article class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
+        <h3 lang="en">Hands-on technical</h3><h3 lang="es">Técnico práctico</h3>
+        <p lang="en">A leader who still codes: about 70% backend and 30% frontend, from architecture to code review.</p>
+        <p lang="es">Un líder que sigue programando: cerca de 70% backend y 30% frontend, de la arquitectura al code review.</p>
+      </article>
+    </div>
+
+    <div class="teams reveal" aria-label="Leadership roles">
+      <h3 lang="en">Leadership roles · timeline</h3><h3 lang="es">Roles de liderazgo · línea de tiempo</h3>
+      <div class="bar-row">
+        <div class="who"><b>Manager - Engineering</b><span>Zensurance · <span lang="en">engineering team</span><span lang="es">equipo de ingeniería</span></span></div>
+        <div class="track"><i style="width:52%"></i></div>
+        <div class="yrs"><span lang="en">2021–now</span><span lang="es">2021–hoy</span></div>
+      </div>
+      <div class="bar-row">
+        <div class="who"><b>Director of Software Dev.</b><span>Solvo Global · <span lang="en">25 devs + design + SEO</span><span lang="es">25 devs + diseño + SEO</span></span></div>
+        <div class="track"><i style="width:21%"></i></div>
+        <div class="yrs">2019–2021</div>
+      </div>
+      <div class="bar-row">
+        <div class="who"><b>Project Manager</b><span>ImpactDigital · <span lang="en">digital ads &amp; web</span><span lang="es">ads digitales y web</span></span></div>
+        <div class="track"><i style="width:47%"></i></div>
+        <div class="yrs">2014–2019</div>
+      </div>
+      <div class="bar-row">
+        <div class="who"><b>IT Director</b><span>Contraloría Nueva Esparta · <span lang="en">8 programmers</span><span lang="es">8 programadores</span></span></div>
+        <div class="track"><i style="width:100%"></i></div>
+        <div class="yrs">2003–2013</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CUNDASIA ================= -->
+<section id="cundasia" class="alt">
+  <div class="wrap">
+    <div class="cunda reveal">
+      <div>
+        <span class="role"><span lang="en">Partner</span><span lang="es">Socio</span> · Cundasia™</span>
+        <h2 lang="en">Building Human Stability Intelligence™.</h2>
+        <h2 lang="es">Construyendo Human Stability Intelligence™.</h2>
+        <p lang="en">I am a partner at <strong>Cundasia™</strong>, a B2B technology company that measures the human conditions behind every organization's performance: stress, psychosocial risk, engagement and stability, with continuous data instead of annual surveys and aligned with ISO 45003.</p>
+        <p lang="es">Soy socio de <strong>Cundasia™</strong>, una empresa de tecnología B2B que mide las condiciones humanas detrás del desempeño de cada organización: estrés, riesgo psicosocial, compromiso y estabilidad, con datos continuos en lugar de encuestas anuales y alineada con ISO 45003.</p>
+        <p lang="en"><em>Conscious technology for sustainable human performance.</em></p>
+        <p lang="es"><em>Tecnología consciente para un desempeño humano sostenible.</em></p>
+        <div class="cta">
+          <a class="btn primary" href="https://cundasia.com/en/platform.html" target="_blank" rel="noopener">
+            <span lang="en">Discover the platform</span><span lang="es">Conocer la plataforma</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="pillars">
+        <div class="pillar"><b>01 · KNOW</b><span lang="en">People &amp; Leadership Intelligence</span><span lang="es">Inteligencia de personas y liderazgo</span></div>
+        <div class="pillar"><b>02 · MEASURE</b><span lang="en">Predictive Human Risk · ISO 45003</span><span lang="es">Riesgo humano predictivo · ISO 45003</span></div>
+        <div class="pillar"><b>03 · ACT</b><span lang="en">Human Performance Intelligence</span><span lang="es">Inteligencia de desempeño humano</span></div>
+        <div class="pillar"><b>04 · TRANSFORM</b><span lang="en">Wellbeing as Organizational Performance</span><span lang="es">Bienestar como desempeño organizacional</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag">03 / <span lang="en">Experience</span><span lang="es">Experiencia</span></span>
+      <h2 lang="en">Three decades, from Delphi to the cloud.</h2>
+      <h2 lang="es">Tres décadas, de Delphi a la nube.</h2>
+    </div>
+
+    <div class="timeline">
+      <article class="job lead-role reveal">
+        <div class="job-head">
+          <h3>Manager - Engineering</h3><span class="org">Zensurance</span><span class="badge" lang="en">Current</span><span class="badge" lang="es">Actual</span>
+          <time>2021 — <span lang="en">Present</span><span lang="es">Presente</span></time>
+        </div>
+        <p lang="en">I lead one of Zensurance's engineering teams, improving, updating and building new APIs for the company's internal systems. I started as a contractor in September 2021 and joined full time in March 2022.</p>
+        <p lang="es">Lidero uno de los equipos de ingeniería de Zensurance, mejorando, actualizando y creando nuevas APIs para los sistemas internos de la empresa. Empecé como contratista en septiembre de 2021 y pasé a tiempo completo en marzo de 2022.</p>
+        <div class="chips"><span class="chip">NodeJS</span><span class="chip">Express</span><span class="chip">MongoDB</span><span class="chip">Git</span><span class="chip">Agile</span></div>
+      </article>
+
+      <article class="job lead-role reveal">
+        <div class="job-head">
+          <h3 lang="en">Director of Software Development</h3><h3 lang="es">Director de Desarrollo de Software</h3><span class="org">Solvo Global</span>
+          <time>2019 — 2021</time>
+        </div>
+        <p lang="en">I led the software development area, building web solutions for major U.S. clients, with a team of <strong>25 programmers, 1 designer and 1 SEO specialist</strong>. I also led digital transformation for several clients: proposing new technologies and overseeing development processes to meet their standards.</p>
+        <p lang="es">Lideré el área de desarrollo de software, creando soluciones web para clientes importantes de EE. UU., con un equipo de <strong>25 programadores, 1 diseñador y 1 especialista SEO</strong>. También lideré la transformación digital de varios clientes: propuse nuevas tecnologías y supervisé los procesos de desarrollo para cumplir sus estándares.</p>
+        <div class="chips"><span class="chip">NodeJS</span><span class="chip">NestJS</span><span class="chip">PHP</span><span class="chip">Laravel</span><span class="chip">React</span><span class="chip">C#</span><span class="chip">SQL Server</span><span class="chip">Jira</span></div>
+      </article>
+
+      <article class="job lead-role reveal">
+        <div class="job-head">
+          <h3>Project Manager</h3><span class="org">ImpactDigital</span>
+          <time>2014 — 2019</time>
+        </div>
+        <p lang="en">I managed digital advertising projects (Facebook, Instagram and Google Ads): audits, campaigns and optimization for the lowest cost per conversion. I also built landing pages, e-commerce modules, tracking (Pixel, Tag Manager), split tests and Infusionsoft integrations.</p>
+        <p lang="es">Gestioné proyectos de publicidad digital (Facebook, Instagram y Google Ads): auditorías, campañas y optimización para el menor costo por conversión. También desarrollé landing pages, módulos de e-commerce, tracking (Pixel, Tag Manager), split tests e integraciones con Infusionsoft.</p>
+        <div class="chips"><span class="chip">PHP</span><span class="chip">TypeScript</span><span class="chip">WordPress</span><span class="chip">WooCommerce</span><span class="chip">Shopify</span><span class="chip">Google Ads</span></div>
+      </article>
+
+      <article class="job lead-role reveal">
+        <div class="job-head">
+          <h3 lang="en">IT Director</h3><h3 lang="es">Director de IT</h3><span class="org">Contraloría del Estado Nueva Esparta</span>
+          <time>2003 — 2013</time>
+        </div>
+        <p lang="en">For ten years I led the institution's technology: strategic plans, systems audits, internal regulations and the automation of all procedures. I managed a team of <strong>8 programmers</strong> and administered the Linux (Debian) infrastructure.</p>
+        <p lang="es">Durante diez años dirigí la tecnología de la institución: planes estratégicos, auditorías de sistemas, normativa interna y la automatización de todos los procedimientos. Dirigí un equipo de <strong>8 programadores</strong> y administré la infraestructura Linux (Debian).</p>
+        <ul lang="en"><li>Payroll, budget, payment orders, checks and loan systems</li><li>Audit results, tax declarations and employee time tracking</li><li>Website and intranet with document exchange</li><li>Servers: Apache, mail, firewall, DMZ, file and print services</li></ul>
+        <ul lang="es"><li>Sistemas de nómina, presupuesto, órdenes de pago, cheques y préstamos</li><li>Resultados de auditoría, declaraciones juradas y control de asistencia</li><li>Sitio web e intranet con intercambio de documentos</li><li>Servidores: Apache, correo, firewall, DMZ, archivos e impresión</li></ul>
+        <div class="chips"><span class="chip">PHP</span><span class="chip">Delphi</span><span class="chip">Yii2</span><span class="chip">C# / .NET</span><span class="chip">Debian</span><span class="chip">Active Directory</span></div>
+      </article>
+
+      <article class="job reveal">
+        <div class="job-head">
+          <h3 lang="en">Software Developer</h3><h3 lang="es">Desarrollador de Software</h3><span class="org">Contraloría del Estado Nueva Esparta</span>
+          <time>2001 — 2003</time>
+        </div>
+        <p lang="en">Windows and web software (on Linux servers). Promoted to IT Director.</p>
+        <p lang="es">Software para Windows y web (sobre servidores Linux). Ascendido a Director de IT.</p>
+      </article>
+
+      <article class="job reveal">
+        <div class="job-head">
+          <h3 lang="en">Programming Professor</h3><h3 lang="es">Profesor de Programación</h3><span class="org">Universidad de Margarita (Unimar)</span>
+          <time>2002 — 2003</time>
+        </div>
+        <p lang="en">Taught programming languages to Systems Engineering students.</p>
+        <p lang="es">Profesor de lenguajes de programación para estudiantes de Ingeniería de Sistemas.</p>
+      </article>
+
+      <article class="job reveal">
+        <div class="job-head">
+          <h3 lang="en">Freelance Software Developer</h3><h3 lang="es">Desarrollador de Software Freelance</h3><span class="org" lang="en">Independent</span><span class="org" lang="es">Independiente</span>
+          <time>2002 — <span lang="en">Present</span><span lang="es">Presente</span></time>
+        </div>
+        <p lang="en">Custom software for many industries, including:</p>
+        <p lang="es">Software a medida para muchas industrias, por ejemplo:</p>
+        <ul lang="en"><li>Home-services scheduling mobile app (NestJS on AWS, Ionic + Angular)</li><li>Medical records systems, including diabetes patient follow-up</li><li>Volumetric analysis software for gas drilling sensor data</li><li>Payroll, budgeting, inventory, event registration and video rental systems (used in 12 stores)</li></ul>
+        <ul lang="es"><li>App móvil para agendar servicios del hogar (NestJS en AWS, Ionic + Angular)</li><li>Sistemas de historias médicas, incluido el seguimiento de pacientes con diabetes</li><li>Software de análisis volumétrico con datos de sensores de perforación de gas</li><li>Sistemas de nómina, presupuesto, inventario, registro de eventos y alquiler de videos (usado en 12 tiendas)</li></ul>
+        <div class="chips"><span class="chip">NestJS</span><span class="chip">Ionic</span><span class="chip">Angular</span><span class="chip">AWS</span><span class="chip">Postgres</span><span class="chip">CakePHP</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag">04 / <span lang="en">Skills</span><span lang="es">Habilidades</span></span>
+      <h2 lang="en">Full-stack, end to end.</h2>
+      <h2 lang="es">Full-stack, de punta a punta.</h2>
+    </div>
+    <div class="skills">
+      <article class="card reveal">
+        <h3><i>&lt;/&gt;</i> Backend</h3>
+        <div class="chips"><span class="chip">NodeJS</span><span class="chip">NestJS</span><span class="chip">Express</span><span class="chip">PHP</span><span class="chip">Laravel</span><span class="chip">Yii / Yii2</span><span class="chip">CakePHP</span><span class="chip">Prado</span><span class="chip">C#</span><span class="chip">.NET</span><span class="chip">Delphi</span></div>
+      </article>
+      <article class="card reveal">
+        <h3><i>{ }</i> Frontend &amp; Mobile</h3>
+        <div class="chips"><span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">Angular</span><span class="chip">React</span><span class="chip">Ionic</span><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">WordPress</span><span class="chip">Elementor</span><span class="chip">Oxygen</span></div>
+      </article>
+      <article class="card reveal">
+        <h3><i>[db]</i> <span lang="en">Data &amp; Cloud</span><span lang="es">Datos y nube</span></h3>
+        <div class="chips"><span class="chip">AWS</span><span class="chip">MySQL</span><span class="chip">SQL Server</span><span class="chip">PostgreSQL</span><span class="chip">MongoDB</span><span class="chip">Paradox</span><span class="chip">Git</span><span class="chip">Bitbucket</span></div>
+      </article>
+      <article class="card reveal">
+        <h3><i>$_</i> <span lang="en">Infrastructure</span><span lang="es">Infraestructura</span></h3>
+        <div class="chips"><span class="chip">Linux (Debian, Ubuntu)</span><span class="chip">Windows Server</span><span class="chip">IIS</span><span class="chip">Apache</span><span class="chip">Active Directory</span><span class="chip">Samba</span><span class="chip">Squid</span><span class="chip">macOS</span></div>
+      </article>
+      <article class="card reveal">
+        <h3><i>AI</i> <span lang="en">AI &amp; Automation</span><span lang="es">IA y automatización</span></h3>
+        <p lang="en">Up to date with current AI tools and methods, for both software development and business automation.</p>
+        <p lang="es">Al día con las herramientas y metodologías de IA actuales, tanto para el desarrollo de software como para la automatización de procesos.</p>
+      </article>
+      <article class="card reveal">
+        <h3><i>↗</i> <span lang="en">Growth &amp; Support</span><span lang="es">Crecimiento y soporte</span></h3>
+        <div class="chips"><span class="chip">Google Ads</span><span class="chip">Meta Business</span><span class="chip">Analytics</span><span class="chip">Tag Manager</span><span class="chip">Shopify</span><span class="chip">Infusionsoft</span><span class="chip">Zendesk</span><span class="chip">Jira</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag">05 / <span lang="en">Education</span><span lang="es">Formación</span></span>
+      <h2 lang="en">Education &amp; languages.</h2>
+      <h2 lang="es">Formación e idiomas.</h2>
+    </div>
+    <div class="edu">
+      <article class="card reveal">
+        <small>1995 — 2001</small>
+        <h3 lang="en">Computer Science Engineer</h3><h3 lang="es">Ingeniero en Computación</h3>
+        <p>Instituto Universitario Politécnico “Santiago Mariño”</p>
+      </article>
+      <article class="card reveal">
+        <small>2005 — 2008</small>
+        <h3 lang="en">State Audit Specialist (Postgraduate)</h3><h3 lang="es">Especialista en Auditoría de Estado (Postgrado)</h3>
+        <p>Universidad Simón Bolívar</p>
+      </article>
+      <article class="card reveal">
+        <small lang="en">Languages</small><small lang="es">Idiomas</small>
+        <h3 lang="en">Spanish · English · French</h3><h3 lang="es">Español · Inglés · Francés</h3>
+        <p lang="en">Native Spanish, proficient English (IELTS 8/9 Speaking, 7/9 overall), basic French.</p>
+        <p lang="es">Español nativo, inglés avanzado (IELTS 8/9 Speaking, 7/9 general), francés básico.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="alt">
+  <div class="wrap contact reveal">
+    <span class="sec-head"><span class="tag">06 / <span lang="en">Contact</span><span lang="es">Contacto</span></span></span>
+    <h2 lang="en">Let's build something together.</h2>
+    <h2 lang="es">Construyamos algo juntos.</h2>
+    <p lang="en">Engineering leadership, software architecture &amp; digital transformation.</p>
+    <p lang="es">Liderazgo de ingeniería, arquitectura de software y transformación digital.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://www.linkedin.com/in/pedro-arrioja/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+        LinkedIn
+      </a>
+      <a class="btn" href="https://github.com/arrioja" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>
+        GitHub
+      </a>
+      <a class="btn" href="https://cundasia.com" target="_blank" rel="noopener">Cundasia™</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Pedro Arrioja</span>
+    <a class="built" href="https://kurotomo.ai" target="_blank" rel="noopener">built with <img src="img/kurotomo-logo.svg" alt="Kurotomo" width="79" height="38"></a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  function setLang(l){
+    root.lang=l;
+    document.title=l==="es"?"Pedro Arrioja — Líder de Ingeniería":"Pedro Arrioja — Engineering Leader";
+    try{localStorage.setItem("lang",l)}catch(e){}
+  }
+  var q=new URLSearchParams(location.search).get("lang"),saved=null;
+  try{saved=localStorage.getItem("lang")}catch(e){}
+  setLang(q==="es"||q==="en"?q:(saved==="es"?"es":"en"));
+  document.querySelectorAll(".lang button").forEach(function(b){
+    b.addEventListener("click",function(){setLang(b.dataset.set)});
+  });
+  document.getElementById("yr").textContent=new Date().getFullYear();
+
+  var els=document.querySelectorAll(".reveal");
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}});
+    },{threshold:.12});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add("in")})}
+})();
+</script>
+</body>
+</html>
