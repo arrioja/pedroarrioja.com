@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pedro Arrioja — Engineering Leader</title>
-<meta name="description" content="Pedro Arrioja — Engineering leader with 30 years in IT. Engineering Manager, software architect and Partner at Cundasia™.">
+<meta name="description" content="Pedro Arrioja — Engineering leader with 30+ years in IT. Engineering Manager, software architect and Partner at Cundasia™.">
 <meta property="og:title" content="Pedro Arrioja — Engineering Leader">
-<meta property="og:description" content="30 years in IT. 20+ years leading technical teams. Partner at Cundasia™.">
+<meta property="og:description" content="30+ years in IT. 20+ years leading technical teams. Partner at Cundasia™.">
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://pedroarrioja.com/">
 <meta property="og:site_name" content="Pedro Arrioja">
@@ -20,7 +20,7 @@
 <meta property="profile:last_name" content="Arrioja">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Pedro Arrioja — Engineering Leader">
-<meta name="twitter:description" content="30 years in IT. 20+ years leading technical teams. Partner at Cundasia™.">
+<meta name="twitter:description" content="30+ years in IT. 20+ years leading technical teams. Partner at Cundasia™.">
 <meta name="twitter:image" content="https://pedroarrioja.com/img/og-image.jpg">
 <meta name="author" content="Pedro Arrioja">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -39,7 +39,7 @@
   "url": "https://pedroarrioja.com/",
   "image": "https://pedroarrioja.com/img/pedro-portrait.jpg",
   "jobTitle": "Engineering Manager",
-  "description": "Engineering leader with 30 years in IT and more than 20 years leading technical teams. Engineering Manager at Zensurance and Partner at Cundasia.",
+  "description": "Engineering leader with 30+ years in IT and 20+ years leading technical teams. Engineering Manager at Zensurance and Partner at Cundasia.",
   "knowsAbout": ["Software Engineering", "Engineering Management", "Software Architecture", "Digital Transformation", "Node.js", "NestJS", "PHP", "Laravel", ".NET", "AWS", "Artificial Intelligence"],
   "sameAs": ["https://www.linkedin.com/in/pedro-arrioja/", "https://github.com/arrioja"],
   "worksFor": [{"@type": "Organization", "name": "Zensurance"}, {"@type": "Organization", "name": "Cundasia", "url": "https://cundasia.com"}],
@@ -366,8 +366,8 @@ footer .built img{width:auto;height:38px}
           <span lang="es">Engineering Manager · Socio de Cundasia™</span>
         </span>
         <h1>Pedro<br><span class="grad">Arrioja</span></h1>
-        <p class="lead" lang="en"><strong>30 years in IT</strong>, more than 20 of them <strong>leading engineering teams</strong>. I build software, and I build the teams that ship it.</p>
-        <p class="lead" lang="es"><strong>30 años en el mundo IT</strong>, más de 20 de ellos <strong>liderando equipos de ingeniería</strong>. Construyo software y también los equipos que lo hacen realidad.</p>
+        <p class="lead" lang="en"><strong><span data-since="1996">30</span> years in IT</strong>, more than <span data-since="2006">20</span> of them <strong>leading engineering teams</strong>. I build software, and I build the teams that ship it.</p>
+        <p class="lead" lang="es"><strong><span data-since="1996">30</span> años en el mundo IT</strong>, más de <span data-since="2006">20</span> de ellos <strong>liderando equipos de ingeniería</strong>. Construyo software y también los equipos que lo hacen realidad.</p>
         <div class="cta">
           <a class="btn primary" href="#experience">
             <span lang="en">View my experience</span><span lang="es">Ver mi experiencia</span>
@@ -392,8 +392,8 @@ footer .built img{width:auto;height:38px}
 pedro.arrioja
 
 <span class="p">$</span> <span class="c">cat profile.yml</span>
-<span class="k">years_in_it</span>:   <span class="n">30+</span>
-<span class="k">leading_teams</span>: <span class="n">20+ years</span>
+<span class="k">years_in_it</span>:   <span class="n"><span data-since="1996">30</span>+</span>
+<span class="k">leading_teams</span>: <span class="n"><span data-since="2006">20</span>+ years</span>
 <span class="k">current</span>:
   - <span class="s">Engineering Manager @ Zensurance</span>
   - <span class="s">Partner @ Cundasia™</span>
@@ -405,8 +405,8 @@ pedro.arrioja
     </div>
 
     <div class="stats">
-      <div class="stat"><b>30<em>+</em></b><span lang="en">years in IT</span><span lang="es">años en IT</span></div>
-      <div class="stat"><b>20<em>+</em></b><span lang="en">years leading teams</span><span lang="es">años liderando equipos</span></div>
+      <div class="stat"><b><span data-since="1996">30</span><em>+</em></b><span lang="en">years in IT</span><span lang="es">años en IT</span></div>
+      <div class="stat"><b><span data-since="2006">20</span><em>+</em></b><span lang="en">years leading teams</span><span lang="es">años liderando equipos</span></div>
       <div class="stat"><b>25<em>+</em></b><span lang="en">engineers in one team</span><span lang="es">ingenieros en un solo equipo</span></div>
       <div class="stat"><b>3</b><span lang="en">languages: ES · EN · FR</span><span lang="es">idiomas: ES · EN · FR</span></div>
     </div>
@@ -747,7 +747,12 @@ pedro.arrioja
   document.querySelectorAll(".lang button").forEach(function(b){
     b.addEventListener("click",function(){setLang(b.dataset.set)});
   });
-  document.getElementById("yr").textContent=new Date().getFullYear();
+  var now=new Date().getFullYear();
+  document.getElementById("yr").textContent=now;
+  document.querySelectorAll("[data-since]").forEach(function(el){
+    var n=now-parseInt(el.getAttribute("data-since"),10);
+    if(n>0)el.textContent=n;
+  });
 
   var els=document.querySelectorAll(".reveal");
   if("IntersectionObserver" in window){
